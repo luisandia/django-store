@@ -4,7 +4,9 @@
 bin/
 include/
 pip-selfcheck.json
-
+Scripts/
+tcl/
+src/db.sqlite3
 # Django related 
 # src/store/settings/local.py
 # static-cdn/  # any collected static files 
