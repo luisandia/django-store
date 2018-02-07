@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'unit_type',
     'operation_type',
+    'voucher_type',
 ]
 
 MIDDLEWARE = [

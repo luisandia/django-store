@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('unit_type/',include('unit_type.urls')),
     path('operation_type/', include('operation_type.urls')),
+    path('voucher_type/', include('voucher_type.urls')),
     path('item/',include('item.urls')),
     path('warehouse/',include('warehouse.urls')),
     path('user/',include('user.urls')),
