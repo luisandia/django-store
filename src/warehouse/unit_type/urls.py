@@ -8,8 +8,8 @@ from .views import (
 )
 
 urlpatterns = [
-    path('list',ListUnitType.as_view(),name="List_UnitType"),
-    path('create',CreateUnitType.as_view(),name="Create_UnitType"),
+    path('list', ListUnitType.as_view(), name="List_UnitType"),
+    path('create', CreateUnitType.as_view(), name="Create_UnitType"),
     path('update/<int:pk>/', UpdateUnitType.as_view(), name="Update_UnitType"),
     path('delete/<int:pk>/', DeleteUnitType.as_view(), name="Delete_UnitType"),
 ]
