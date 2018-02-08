@@ -31,18 +31,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'item.apps.ItemConfig',
+    'item.item_',
     'user.apps.UserConfig',
-    'warehouse_.apps.WarehouseConfig',
+    'warehouse.warehouse_',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'unit_type',
-    'operation_type',
-    'voucher_type',
+    'warehouse.unit_type',
+    'warehouse.operation_type',
+    'warehouse.voucher_type',
 ]
 
 MIDDLEWARE = [
