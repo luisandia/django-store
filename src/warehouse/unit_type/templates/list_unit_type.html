@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unit Type</title>
+</head>
+<body>
+<div class="container">
+    <div class="container" align="center">
+        <table >
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Code unit type</td>
+                    <td>Name unit type</td>
+                    <td> <a href="{% url 'Create_UnitType' %}">Create</a></td>
+                </tr>
+
+            </thead>
+            <tbody>
+                {% if object_list %}
+                    {% for obj in object_list %}
+                        <tr>
+                            <td>{{page_obj.start_index|add:forloop.counter0}}</td>
+                            <td>{{ obj.code }}</td>
+                            <td>{{ obj.name }}</td>
+                            <td>
+                                <a href="{% url 'Update_UnitType' obj.id_unit_type %}">Update</a>
+                                <a href="{% url 'Delete_UnitType' obj.id_unit_type %}">Delete</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+                {% else %}
+                    <h1>There aren't registers</h1>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
