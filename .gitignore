@@ -7,7 +7,6 @@ pip-selfcheck.json
 Scripts/
 tcl/
 *.sqlite3
-migrations/
 # Django related 
 # src/store/settings/local.py
 # static-cdn/  # any collected static files 
