@@ -13,11 +13,12 @@ class ItemCategorie(models.Model):
 	category_name    = models.CharField(max_length = 45)
 	has_kardex       = models.IntegerField()
 	def __str__(self):
-		return self.category_name
+		return self.item_name
+
 
 class Item(models.Model):
 	item_id        = models.AutoField(primary_key = True)
-	item_name      = models.CharField(max_length = 45)
+	item_name      = models.CharField(max_length = 40)
 	description    = models.CharField(max_length = 48)
 	category_id    = models.ForeignKey(ItemCategorie, on_delete = models.CASCADE)
 	existence_type = models.ForeignKey(ExistenceType,on_delete = models.CASCADE) 
