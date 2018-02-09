@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django import forms
-from .models import unit_type
+from ..warehouse_.models import unit_type
 
 class UnitTypeForm(forms.ModelForm):
     class Meta:

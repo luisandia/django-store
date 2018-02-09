@@ -5,7 +5,7 @@ from django.views.generic import (
     DeleteView,
     UpdateView
 )
-from .models import unit_type
+from ..warehouse_.models import unit_type
 from .forms import UnitTypeForm
 from django.urls import reverse_lazy
 # Create your views here.
