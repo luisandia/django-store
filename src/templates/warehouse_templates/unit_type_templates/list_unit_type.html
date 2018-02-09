@@ -1,19 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Operation Type</title>
-</head>
-<body>
-<div class="container">
+{% extends 'base.html'%}
+{% block content %}
+
     <div class="container" align="center">
+        <h1>Unit Type</h1>
         <table >
             <thead>
                 <tr>
                     <td>#</td>
+                    <td>Code unit type</td>
                     <td>Name unit type</td>
-                    <td>Description operation type</td>
-                    <td> <a href="{% url 'Create_OperationType' %}">Create</a></td>
+                    <td> <a href="{% url 'warehouse_templates:Create_UnitType' %}">Create</a></td>
                 </tr>
 
             </thead>
@@ -25,8 +21,8 @@
                             <td>{{ obj.code }}</td>
                             <td>{{ obj.name }}</td>
                             <td>
-                                <a href="{% url 'Update_OperationType' obj.id_type_operation %}">Update</a>
-                                <a href="{% url 'Delete_OperationType' obj.id_type_operation %}">Delete</a>
+                                <a href="{% url 'warehouse_templates:Update_UnitType' obj.id_unit_type %}">Update</a>
+                                <a href="{% url 'warehouse_templates:Delete_UnitType' obj.id_unit_type %}">Delete</a>
                             </td>
                         </tr>
                     {% endfor %}
@@ -37,6 +33,4 @@
             </tbody>
         </table>
     </div>
-</div>
-</body>
-</html>
+{% endblock %}

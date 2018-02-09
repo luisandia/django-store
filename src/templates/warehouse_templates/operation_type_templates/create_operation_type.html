@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Voucher Type</title>
-</head>
-<body>
-<div class="container">
+{% extends 'base.html'%}
+{% block content %}
     <div>
+        <h1>Operation Type</h1>
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
@@ -15,6 +10,4 @@
             </div>
         </form>
     </div>
-</div>
-</body>
-</html>
+{% endblock %}
