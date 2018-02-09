@@ -7,7 +7,7 @@ class ExistenceType(models.Model):
 	name              = models.CharField(max_length = 45)
 	def __str__(self):
 		return self.name
-
+		
 class ItemCategorie(models.Model):
 	item_category_id = models.AutoField(primary_key = True)
 	category_name    = models.CharField(max_length = 45)
