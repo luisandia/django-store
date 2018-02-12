@@ -1,5 +1,5 @@
 [client]
 database = django_store
 user = root
-password = multiservis
+password = root
 default-character-set = utf8

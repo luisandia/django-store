@@ -24,6 +24,6 @@ urlpatterns = [
     path('', views.HomePage.as_view(), name="home"),
     path('admin/', admin.site.urls),
     path('item/', include('item.item_.urls', namespace="item")),
-    path('warehouse/', include('warehouse.warehouse_.urls', namespace="warehouse")),
+    path('warehouse_templates/', include('warehouse.warehouse_.urls', namespace="warehouse_templates")),
     path('user/', include('user.urls')),
 ]

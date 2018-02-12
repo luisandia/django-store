@@ -1,8 +1,15 @@
 from django.contrib import admin
-from ..warehouse_.models import unit_type
-from .models import Warehouse
-from .models import WarehouseHasItem
+
+from .models import (
+    Warehouse,
+    WarehouseHasItem,
+    UnitType,
+    VoucherType,
+    OperationType
+)
 # Register your models here.
-admin.site.register(unit_type)
+admin.site.register(UnitType)
+admin.site.register(VoucherType)
+admin.site.register(OperationType)
 admin.site.register(Warehouse)
 admin.site.register(WarehouseHasItem)
