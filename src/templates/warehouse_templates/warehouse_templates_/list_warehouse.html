@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+{% block content %}
+
+    <div class="container" align="center">
+        <h1>Warehouse</h1>
+        <table >
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Warehouse Name</td>
+                    <td>Warehouse Description</td>
+                    <td> <a href="{% url 'warehouse_templates:Create_Warehouse' %}">Create</a></td>
+                </tr>
+
+            </thead>
+            <tbody>
+                {% if object_list %}
+                    {% for obj in object_list %}
+                        <tr>
+                            <td>{{page_obj.start_index|add:forloop.counter0}}</td>
+                            <td>{{ obj.name }}</td>
+                            <td>{{ obj.description }}</td>
+                            <td>
+                                <a href="{% url 'warehouse_templates:Update_Warehouse' obj.warehouse_id %}">Update</a>
+                                <a href="{% url 'warehouse_templates:Delete_Warehouse' obj.warehouse_id %}">Delete</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+                {% else %}
+                    <h1>There aren't registers</h1>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

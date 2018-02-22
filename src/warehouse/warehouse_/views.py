@@ -11,12 +11,14 @@ from .models import (
     UnitType,
     OperationType,
     VoucherType,
+    Warehouse,
 )
 
 from .forms import (
     UnitTypeForm,
     OperationTypeForm,
-    VoucherTypeForm
+    VoucherTypeForm,
+    WarehouseForm,
 )
 # Create your views here.
 
@@ -101,3 +103,29 @@ class DeleteVoucherType(DeleteView):
     model = VoucherType
     template_name = 'warehouse_templates/voucher_type_templates/delete_voucher_type.html'
     success_url = reverse_lazy("warehouse_templates:List_VoucherType")
+
+
+# Warehouse views
+class ListWarehouse(ListView):
+    model = Warehouse
+    template_name = 'warehouse_templates/warehouse_templates_/list_warehouse.html'
+
+
+class CreateWarehouse(CreateView):
+    model = Warehouse
+    form_class = WarehouseForm
+    template_name = 'warehouse_templates/warehouse_templates_/create_warehouse.html'
+    success_url = reverse_lazy("warehouse_templates:List_Warehouse")
+
+
+class UpdateWarehouse(UpdateView):
+    model = Warehouse
+    form_class = WarehouseForm
+    template_name = 'warehouse_templates/warehouse_templates_/create_warehouse.html'
+    success_url = reverse_lazy("warehouse_templates:List_Warehouse")
+
+
+class DeleteWarehouse(DeleteView):
+    model = Warehouse
+    template_name = 'warehouse_templates/warehouse_templates_/delete_warehouse.html'
+    success_url = reverse_lazy("warehouse_templates:List_Warehouse")

@@ -14,6 +14,10 @@ from .views import (
     CreateVoucherType,
     UpdateVoucherType,
     DeleteVoucherType,
+    ListWarehouse,
+    CreateWarehouse,
+    UpdateWarehouse,
+    DeleteWarehouse,
 )
 
 app_name = 'warehouse_templates'
@@ -35,4 +39,9 @@ urlpatterns = [
     path('voucher_type/create',CreateVoucherType.as_view(),name = "Create_VoucherType"),
     path('voucher_type/update/<int:pk>/', UpdateVoucherType.as_view(), name = "Update_VoucherType"),
     path('voucher_type/delete/<int:pk>/', DeleteVoucherType.as_view(), name = "Delete_VoucherType"),
+    # Warehouse urls
+    path('warehouse/list',ListWarehouse.as_view(),name = "List_Warehouse"),
+    path('warehouse/create',CreateWarehouse.as_view(),name = "Create_Warehouse"),
+    path('warehouse/update/<int:pk>/', UpdateWarehouse.as_view(), name = "Update_Warehouse"),
+    path('warehouse/delete/<int:pk>/', DeleteWarehouse.as_view(), name = "Delete_Warehouse"),
 ]

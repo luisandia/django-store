@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+{% block content %}
+<div>
+    <h1>Warehouse</h1>
+    <form method="post">
+        {% csrf_token %}
+        <h3>Do you want to delete {{ object.name }}?</h3>
+    	<div class="btn-group">
+            <button type="submit">Yes, delete</button>
+	        <a href="{% url 'List_VoucherType' %}">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

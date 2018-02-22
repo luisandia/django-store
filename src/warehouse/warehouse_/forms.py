@@ -4,6 +4,7 @@ from .models import (
     UnitType,
     OperationType,
     VoucherType,
+    Warehouse,
 )
 
 class UnitTypeForm(forms.ModelForm):
@@ -60,6 +61,25 @@ class VoucherTypeForm(forms.ModelForm):
 
         widgets = {
             'code':forms.NumberInput(attrs={'class': 'form-control'}),
+            'name':forms.TextInput(attrs={'class': 'form-control'}),
+            'description': forms.TextInput(attrs={'class': 'form-control'}),
+        }
+
+
+class WarehouseForm(forms.ModelForm):
+    class Meta:
+        model = Warehouse
+        fields = [
+            'name',
+            'description'
+        ]
+
+        labels = {
+            'name':'Nombre',
+            'description': 'Descripción'
+        }
+
+        widgets = {
             'name':forms.TextInput(attrs={'class': 'form-control'}),
             'description': forms.TextInput(attrs={'class': 'form-control'}),
         }
